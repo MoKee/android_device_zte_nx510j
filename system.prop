@@ -204,3 +204,6 @@ audio.offload.passthrough=false
 audio.offload.multiple.enabled=true
 
 ro.telephony.default_cdma_sub=0
+
+# Maintainer
+ro.mk.maintainer=dianlujitao

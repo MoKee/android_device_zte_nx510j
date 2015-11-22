@@ -88,7 +88,7 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_SHOW_PERCENTAGE := true
 
 # CM Hardware
-BOARD_HARDWARE_CLASS := device/zte/nx510j/cmhw \
+BOARD_HARDWARE_CLASS := device/zte/nx510j/mkhw \
     hardware/cyanogen/cmhw
 
 # DPM NSRM Feature
@@ -147,7 +147,7 @@ TARGET_USES_UNCOMPRESSED_KERNEL := true
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
 BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_KERNEL_SOURCE := kernel/zte/msm8994
-TARGET_KERNEL_CONFIG := cyanogenmod_nx510j_defconfig
+TARGET_KERNEL_CONFIG := mokee_nx510j_defconfig
 
 WLAN_MODULES:
 	mkdir -p $(KERNEL_MODULES_OUT)/qca_cld

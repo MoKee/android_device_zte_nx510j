@@ -88,7 +88,7 @@ BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
 # CM Hardware
 BOARD_HARDWARE_CLASS := \
-    hardware/cyanogen/cmhw \
+    hardware/mokee/mkhw \
     $(LOCAL_PATH)/cmhw
 TARGET_TAP_TO_WAKE_NODE := "/data/tp/easy_wakeup_gesture"
 

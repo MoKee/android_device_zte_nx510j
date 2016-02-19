@@ -1,4 +1,4 @@
-# Copyright (C) 2015 The MoKee Opensource Project
+# Copyright (C) 2016 The MoKee Opensource Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,8 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit from nx510j device
-$(call inherit-product, device/zte/nx510j/nx510j.mk)
+$(call inherit-product, device/zte/nx510j/full_nx510j.mk)
 
 # Enhanced NFC
 $(call inherit-product, vendor/mk/config/nfc_enhanced.mk)
@@ -25,14 +24,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.mk.maintainer=dianlujitao
 
 PRODUCT_NAME := mk_nx510j
+BOARD_VENDOR := nubia
+TARGET_VENDOR := nubia
 PRODUCT_DEVICE := nx510j
-PRODUCT_MANUFACTURER := nubia
-PRODUCT_MODEL := NX510J
 
 PRODUCT_GMS_CLIENTID_BASE := android-zte
 
-PRODUCT_BRAND := nubia
-TARGET_VENDOR := nubia
 TARGET_VENDOR_PRODUCT_NAME := NX510J
 TARGET_VENDOR_DEVICE_NAME := NX510J
 PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=NX510J PRODUCT_NAME=NX510J
@@ -40,6 +37,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=NX510J PRODUCT_NAME=NX510J
 ## Use the latest approved GMS identifiers
 ifneq ($(SIGN_BUILD),true)
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT=nubia/NX510J/NX510J:5.1.1/LMY47V/eng.nubia.20160120.181358:user/release-keys \
-    PRIVATE_BUILD_DESC="NX510J-user 5.1.1 LMY47V eng.nubia.20160120.181358 release-keys"
+    BUILD_FINGERPRINT=nubia/NX510J/NX510J:5.1.1/LMY47V/eng.nubia.20160205.164306:user/release-keys \
+    PRIVATE_BUILD_DESC="NX510J-user 5.1.1 LMY47V eng.nubia.20160205.164306 release-keys"
 endif

@@ -92,18 +92,11 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm8994 \
     Snap
 
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
-
-# Compat symbols
-PRODUCT_PACKAGES += \
-    libboringssl-compat \
-    libstlport \
-    libzte_camera
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
@@ -163,10 +156,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/Generic.kl:system/usr/keylayout/Generic.kl \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
     $(LOCAL_PATH)/keylayout/qpnp_pon.kl:system/usr/keylayout/qpnp_pon.kl
-
-# Keystore
-PRODUCT_PACKAGES += \
-    keystore.msm8994
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -235,11 +224,12 @@ PRODUCT_PACKAGES += \
     libxml2
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/telephony/NX510J_Z0-0.xml:system/etc/telephony/NX510J_Z0-0.xml \
+    $(LOCAL_PATH)/configs/telephony/NX510J_Z0.xml:system/etc/telephony/NX510J_Z0.xml \
     $(LOCAL_PATH)/configs/telephony/default_static_config.xml:system/etc/telephony/default_static_config.xml
 
 # Sensors
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sensors/hals.conf:system/etc/sensors/hals.conf \
     $(LOCAL_PATH)/configs/sensors/sensor_def_qcomdev.conf:system/etc/sensors/sensor_def_qcomdev.conf
 
 # Thermal
